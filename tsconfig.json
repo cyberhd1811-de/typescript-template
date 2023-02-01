@@ -1,0 +1,136 @@
+{
+    "compileOnSave": true, // ~ Use it when bug fixing?
+    "compilerOptions": {
+        // _ Type Checking
+        "allowUnreachableCode": false,
+        "allowUnusedLabels": false,
+        "alwaysStrict": true,
+        "exactOptionalPropertyTypes": true,
+        "noFallthroughCasesInSwitch": true,
+        "noImplicitAny": true,
+        "noImplicitOverride": true,
+        "noImplicitReturns": true,
+        "noImplicitThis": true,
+        "noPropertyAccessFromIndexSignature": true,
+        "noUncheckedIndexedAccess": true,
+        "noUnusedLocals": true,
+        "noUnusedParameters": true,
+        "strict": true,
+        "strictBindCallApply": true,
+        "strictFunctionTypes": true,
+        "strictNullChecks": true,
+        "strictPropertyInitialization": true,
+        "useUnknownInCatchVariables": true,
+
+        // _ Modules
+        "baseUrl": "./", // ~ Could be confusing with node module imports
+        "module": "ES2022",
+        "moduleResolution": "Node",
+        "moduleSuffixes": [""], // ~ Used when working with files for specific enviroments (e.g.: exp.ios.ts, exp.android.ts, ...)
+        "noResolve": false,
+        "paths": {},
+        "resolveJsonModule": true,
+        "rootDir": "src/",
+
+        // _ Emit
+        "declaration": true,
+        "declarationDir": "./@types",
+        "declarationMap": true,
+        "downlevelIteration": false,
+        "emitBOM": false,
+        "emitDeclarationOnly": false,
+        "importHelpers": false,
+        "importsNotUsedAsValues": "error",
+        "inlineSourceMap": false, // ? Could be useful somewhere?
+        "inlineSources": false, // ? Could be useful in combination with inlineSourceMap or sourceMap
+        "noEmit": false,
+        "noEmitHelpers": true, // ? Not shure what to pick here
+        "noEmitOnError": true,
+        "outDir": "dist/",
+        "preserveConstEnums": true, // ~ More "ugly" code which does not help in the destination enviroment
+        "preserveValueImports": true, // TODO Understand what it does and when to use it
+        "removeComments": true,
+        "sourceMap": false,
+        "stripInternal": true,
+
+        // _ Javascript Support
+        "allowJs": false,
+        "checkJs": false,
+
+        // _ Editor Support
+        "disableSizeLimit": false,
+        "plugins": [],
+
+        // _ Interop Constraints
+        "allowSyntheticDefaultImports": true,
+        "esModuleInterop": true,
+        "forceConsistentCasingInFileNames": true,
+        "isolatedModules": true,
+        "preserveSymlinks": false,
+
+        // _ Backwards Compatibility
+        "charset": "utf8",
+        "keyofStringsOnly": true,
+        "noImplicitUseStrict": false,
+        "noStrictGenericChecks": false,
+        "suppressExcessPropertyErrors": false, // ~ Use // @ts-ignore to suppress
+        "suppressImplicitAnyIndexErrors": false, // ~ Use // @ts-ignore to suppress
+
+        // _ Language and Enviroment
+        "emitDecoratorMetadata": false,
+        "experimentalDecorators": false,
+        "lib": [], // ~ Since target is ES2022, all functionalities should be included by default
+        "moduleDetection": "auto",
+        "noLib": false,
+        "target": "ES2022",
+        "useDefineForClassFields": true,
+
+        // _ Compiler Diagnostics
+        // DEPRECATED "diagnostics": true, Use extendedDiagnostics
+        "explainFiles": false, // ~ Turn on when needed
+        "extendedDiagnostics": true,
+        // NOT YET NEEDED "generateCpuProfile": "profile.cpuprofile",
+        "listEmittedFiles": true,
+        // ? "listFiles": true, Can be false because of listFilesOnly?
+        "listFilesOnly": true,
+        "traceResolution": false, // ~ Turn on when having issues with modules not beeing included
+
+        // _ Projects
+        "composite": true,
+        "disableReferencedProjectLoad": false,
+        "disableSolutionSearching": false,
+        "disableSourceOfProjectReferenceRedirect": false,
+        "incremental": true,
+        "tsBuildInfoFile": "./build",
+
+        // _ Output Formatting
+        "noErrorTruncation": true,
+        "preserveWatchOutput": true, // ~ Used to keep console output when watchmode is active
+        "pretty": true,
+
+        // _ Completeness
+        "skipDefaultLibCheck": false,
+        "skipLibCheck": false,
+
+        // _ Command Line
+
+        // _ Watch Options
+        "assumeChangesOnlyAffectDirectDependencies": true
+    },
+    // NOT YET NEEDED "exclude": [],
+    "include": ["src/**/*"],
+    // TODO "ts-node": {},
+    "watchOptions": {
+        "fallbackPolling": "priorityinterval",
+        "excludeDirectories": ["**/node_modules", "build/**/*"],
+        "excludeFiles": [
+            ".gitignore",
+            "LICENSE.md",
+            "pnpm-lock.yaml",
+            "README.md"
+        ],
+        "synchronousWatchDirectory": false,
+        "watchFile": "useFsEvents",
+        "watchDirectory": "useFsEvents"
+    }
+}
