@@ -1,5 +1,8 @@
 # Folder
+@types
+dist
 node_modules
 
 # File (extensions)
 *.env
+.tsbuildinfo

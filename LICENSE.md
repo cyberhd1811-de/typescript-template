@@ -1,4 +1,3 @@
-@@ -0,0 +1,28 @@
 BSD 3-Clause License
 
 Copyright (c) 2022, CyberHD1811

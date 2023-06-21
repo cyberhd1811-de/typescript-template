@@ -1,5 +1,5 @@
 {
-    "compileOnSave": true, // ~ Use it when bug fixing?
+    "compileOnSave": false, // ~ Use it when bug fixing?
     "compilerOptions": {
         // _ Type Checking
         "allowUnreachableCode": false,
@@ -30,7 +30,7 @@
         "noResolve": false,
         "paths": {},
         "resolveJsonModule": true,
-        "rootDir": "src/",
+        "rootDir": "./src",
 
         // _ Emit
         "declaration": true,
@@ -46,7 +46,7 @@
         "noEmit": false,
         "noEmitHelpers": true, // ? Not shure what to pick here
         "noEmitOnError": true,
-        "outDir": "dist/",
+        "outDir": "./dist",
         "preserveConstEnums": true, // ~ More "ugly" code which does not help in the destination enviroment
         "preserveValueImports": true, // TODO Understand what it does and when to use it
         "removeComments": true,
@@ -70,7 +70,7 @@
 
         // _ Backwards Compatibility
         "charset": "utf8",
-        "keyofStringsOnly": true,
+        "keyofStringsOnly": true, // ! Throws errors with some libraries (prisma)
         "noImplicitUseStrict": false,
         "noStrictGenericChecks": false,
         "suppressExcessPropertyErrors": false, // ~ Use // @ts-ignore to suppress
@@ -91,8 +91,8 @@
         "extendedDiagnostics": true,
         // NOT YET NEEDED "generateCpuProfile": "profile.cpuprofile",
         "listEmittedFiles": true,
-        // ? "listFiles": true, Can be false because of listFilesOnly?
-        "listFilesOnly": true,
+        "listFiles": true,
+        // "listFilesOnly": false, // ~ Turn on when just wanting to list all files, but not compiling
         "traceResolution": false, // ~ Turn on when having issues with modules not beeing included
 
         // _ Projects
@@ -101,7 +101,7 @@
         "disableSolutionSearching": false,
         "disableSourceOfProjectReferenceRedirect": false,
         "incremental": true,
-        "tsBuildInfoFile": "./build",
+        "tsBuildInfoFile": ".tsbuildinfo",
 
         // _ Output Formatting
         "noErrorTruncation": true,
